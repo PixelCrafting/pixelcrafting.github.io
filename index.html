@@ -11,8 +11,21 @@
       width: 100%;
     }
   </style>
+  <script>
+    function hideAds() {
+      var iframe = document.getElementById("embeddedFrame");
+      var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+      // Replace this with the appropriate selector for the ads
+      var ads = iframeDocument.querySelectorAll(".ad-class-name");
+      
+      for (var i = 0; i < ads.length; i++) {
+        ads[i].style.display = "none";
+      }
+    }
+  </script>
 </head>
-<body>
+<body onload="hideAds()">
   <header>
     <div class="header-image">
       <img src="https://c4.wallpaperflare.com/wallpaper/226/682/452/minecraft-waterfall-video-games-wallpaper-preview.jpg" alt="PixelCrafting Minecraft Сървър">
@@ -36,7 +49,7 @@
     </section>
   </main>
 
-  <iframe src="https://www.totalsportek.tv/watch/player5.htm"></iframe>
+  <iframe id="embeddedFrame" frameborder="0" src="https://bestsolaris.com/solaris.php?postid=38234" allowfullscreen scrolling="no" allowtransparency></iframe>
 
   <footer>
     <p>&copy; 2023 PixelCrafting. Всички права запазени.</p>
